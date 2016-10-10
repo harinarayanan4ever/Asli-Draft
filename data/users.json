@@ -1,0 +1,8 @@
+[{ "_id" : ObjectId("57c45b0aba28ef23a5dc0a60"), "id" : 1, "email" : "harinarayanan4ever@gmail.com", "password" : "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", "teamId" : 1 },
+{ "_id" : ObjectId("57c45b0aba28ef23a5dc0a61"), "id" : 2, "email" : "pushkar.paranjape@gmail.com", "password" : "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", "teamId" : 2 },
+{ "_id" : ObjectId("57c45b0aba28ef23a5dc0a62"), "id" : 3, "email" : "ajay0076@gmail.com", "password" : "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", "teamId" : 3 },
+{ "_id" : ObjectId("57c45b0aba28ef23a5dc0a63"), "id" : 4, "email" : "huntbegins@gmail.com", "password" : "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", "teamId" : 4 },
+{ "_id" : ObjectId("57c45b0aba28ef23a5dc0a64"), "id" : 5, "email" : "sauttam@gmail.com", "password" : "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", "teamId" : 5 },
+{ "_id" : ObjectId("57c45b0aba28ef23a5dc0a65"), "id" : 6, "email" : "aniketsawant1611@gmail.com", "password" : "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", "teamId" : 6 },
+{ "_id" : ObjectId("57c45b0aba28ef23a5dc0a66"), "id" : 7, "email" : "sushantanaokar@gmail.com", "password" : "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", "teamId" : 7 },
+{ "_id" : ObjectId("57c45b0aba28ef23a5dc0a67"), "id" : 8, "email" : "aniket.vaze@gmail.com", "password" : "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", "teamId" : 8 }]

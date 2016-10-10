@@ -1,0 +1,94 @@
+<div ng-show="!showPoints">
+    <div class="page-header">
+      League
+    </div>
+    <table class="table">
+        <thead>
+            <th>
+                Rank
+            </th>
+            <th>
+                Team
+            </th>
+            <th>
+                Points
+            </th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="team in teams">
+                <td>
+                    {{$index + 1}}
+                </td>
+                <td>
+                    <a ng-click="getPoints(team._id)" style="cursor:pointer;text-decoration:none">{{team.name}}</a>
+                </td>
+                <td>
+                    {{team.totalPoints}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div ng-show="showPoints">
+    <div id="myTeam"  class="myTeam">
+      <div class="container">
+        <div class="page-header">Your Team</div>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="field">
+              <div class="field_row gkp">
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+              </div>
+              <div class="field_row  def">
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+              </div>
+              <div class="field_row mid">
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+              </div>
+              <div class="field_row fwd">
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+              </div>
+            </div>
+            <div class="bench container">
+              <div class="bench_row">
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+                <div class="field-element"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+              <!--<div class="">
+                  <span>Gameweek: </span>
+                  <span id="gwNo"></span>
+              </div>-->
+              <div class="">
+                  <h3 id="teamName"></h3>
+              </div>
+              <div>
+                  <b>Gameweek Points: </b>
+                  <span id="totalPoints"></span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

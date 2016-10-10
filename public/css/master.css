@@ -1,0 +1,114 @@
+.field{
+  background: url('/images/pitch.png') no-repeat;
+  width: 80%;
+  min-height:470px;
+  padding: 10px 30px;
+  min-width: 500px;
+}
+
+.field_row{
+  min-height: 100px;
+  min-width: 400px;
+  height:25%;
+  margin: auto;
+}
+
+.def,.mid{
+  margin-left: 10px;
+}
+.field-element{
+  width: 19%;
+  display:inline-block;
+}
+
+.jersey-image{
+  width: 40px;
+  height: 60px;
+}
+
+.bench{
+  width: 80%;
+  float:left;
+  margin-top: 20px;
+  min-width: 500px;
+}
+
+.bench:after{
+  clear:both;
+}
+
+.squad{
+  height: 500px;
+}
+
+.field .player-name{
+  font: helvetica arial;
+  font-size: 10px;
+  background: #35A649;
+  text-align: center;
+  margin-left: -10px;
+  width: 70px;
+}
+
+.squad-table{
+  margin-bottom: 5px;
+}
+
+.squad-table th{
+    background: #d3d3d3;
+    height: 30px;
+    padding: 5px;
+}
+
+.name-header{
+  width: 150px;
+  color:#000000;
+}
+
+.squad-player{
+  height: 30px;
+  padding: 5px;
+  border-bottom: grey
+}
+
+.replaceLink{
+  font-size: 13px;
+  cursor: pointer;
+  color: transparent;
+  background: url('/images/replace.png') no-repeat;
+  margin-left: 5px;
+}
+
+.fix-info {
+    font-size: 9px;
+}
+
+.replaceLink:hover{
+  color:transparent;
+}
+
+.replaceLink-squad{
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  margin-left: 10px;
+}
+
+.submitButton{
+  margin: auto;
+  width:200px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.color-black {
+    color: #000000;
+}
+
+.rounded{
+    border-radius: 4px;
+}
+
+.mlm {
+    margin-left: 10px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="Fantasy">
+  <head>
+    <meta charset="utf-8">
+    <title>Fantasy Draft</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Fantasy Draft</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="/myTeam">My Team</a>
+            </li>
+            <li>
+              <a href="/points">Points</a>
+            </li>
+            <li>
+              <a href="/league">Leagues</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/logout" target="_self">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" ng-view>
+
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="lib/underscore-min.js"></script>
+    <script type="text/javascript" src="src/Player.js"></script>
+    <script type="text/javascript" src="src/fantasyapp.js"></script>
+    <script type="text/javascript" src="src/Points.js"></script>
+    <script type="text/javascript" src="src/leagueController.js"></script>
+    <script type="text/javascript" src="src/myTeamController.js"></script>
+    <script type="text/javascript" src="src/PointsController.js"></script>
+    <script type="text/javascript" src="src/factories.js"></script>
+    <script type="text/javascript" src="src/fantasy.js"></script>
+  </body>
+</html>

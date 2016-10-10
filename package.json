@@ -1,0 +1,27 @@
+{
+  "name": "fpl_draft",
+  "version": "0.0.0",
+  "description": "Fantasy Draft",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "crypto": "0.0.3",
+    "express": "^4.13.1",
+    "express-session": "^1.11.3",
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.0",
+    "http": "0.0.0",
+    "jquery": "^2.1.4",
+    "mongodb": "^2.0.39",
+    "mongoose": "^4.1.9",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "grunt-war": "^0.5.1"
+  }
+}

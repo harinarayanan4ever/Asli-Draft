@@ -1,0 +1,129 @@
+<div id="myTeam"  class="myTeam" ng-controller="MyTeamController">
+  <div class="container">
+    <div class="page-header">Your Team</div>
+    <div class="row">
+      <div class="col-md-7">
+        <div class="field">
+          <div class="field_row gkp">
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+          </div>
+          <div class="field_row  def">
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+          </div>
+          <div class="field_row mid">
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+          </div>
+          <div class="field_row fwd">
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+          </div>
+        </div>
+        <div class="bench container">
+          <div class="bench_row">
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+            <div class="field-element"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 squad" >
+        <div>
+          <table id="squad-gkp" class="squad-table">
+            <thead>
+              <tr>
+                <th class="name-header">
+                  GK
+                </th>
+                <th class="color-black">
+                  POINTS
+                </th>
+                <th class="color-black">
+                  Next Fix
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div>
+          <table id="squad-def" class="squad-table">
+            <thead>
+              <tr>
+                <th class="name-header">
+                  DEFENDER
+                </th>
+                <th class="color-black">
+                  POINTS
+                </th>
+                <th class="color-black">
+                  Next Fix
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div>
+          <table id="squad-mid" class="squad-table">
+            <thead>
+              <tr>
+                <th class="name-header">
+                  MID-FIELDER
+                </th>
+                <th class="color-black">
+                  POINTS
+                </th>
+                <th class="color-black">
+                  Next Fix
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div>
+          <table id="squad-fwd" class="squad-table">
+            <thead>
+              <tr>
+                <th class="name-header">
+                  FORWARD
+                </th>
+                <th class="color-black">
+                  POINTS
+                </th>
+                <th class="color-black">
+                  Next Fix
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <div class="submitButton row">
+          <!--<input type="button" name="name" ng-disabled="cancelDisabled" class="btn btn-primary rounded" value="Cancel">-->
+          <input type="button" name="name" ng-disabled="submitDisabled" ng-click="submitTeam()" id ="submitTeam" class="btn btn-primary rounded mlm" value="Submit">
+        </div>
+    </div>
+  </div>
+</div>

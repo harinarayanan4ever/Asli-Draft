@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="Fantasy">
+  <head>
+    <meta charset="utf-8">
+    <title>Fantasy Draft</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/bootstrap.min.css">
+    <style media="screen">
+    .loginBox {
+      width: 500px;
+      min-height: 250px;
+      float: left;
+      padding: 24px 25px 24px 25px;
+      background-color: #FFFFFF;
+      color:black;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    .table-display{
+      min-height:700px;
+      width: 400px;
+      height: 100%;
+      margin: 0 auto;
+      display: table;
+      overflow: hidden;
+    }
+    .align-vert{
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .loginBox .form-input{
+      background: #FFFFFF;
+      border: 1px solid #CCD0D3;
+      border-radius:4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      color: #262E3C;
+      padding: 6px;
+      font-size: 12px;
+    }
+    </style>
+  </head>
+  <body>
+        <div class="table-display">
+          <div class="align-vert">
+            <div class="loginBox">
+              <h2>Fantasy Draft</h2>
+              <form class="form-horizontal" action="/login" method="POST">
+                <div class="row form-group">
+                  <label for="email" class="control-label com-sm-2">Email Id:</label>
+                  <div>
+                    <input type="email" class="form-control   form-input" name="email" id="email" placeholder="Email">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label for="password" class="control-label com-sm-2">Password:</label>
+                  <div>
+                    <input type="password" name="password" class = "form-control form-input" placeholder="****"/>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-sm-offset-5">
+                    <button class="btn btn-primary">Log In</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  </body>
+</html>

@@ -6,8 +6,14 @@ var express = require('express'),
 var bodyParser = require('body-parser'),
     session = require('express-session'),
     crypto = require('crypto'),
-    globalObj = {gw: 4};
-    //globalObj = require('./scripts/adminService');
+    adminService = require('./scripts/adminService');
+
+var globalObj;
+
+adminService.getSettings()
+                    .then(function(data) {
+                        globalObj = data;
+                    });
 
 var Model = require('./model/MongooseModels');
 
@@ -51,11 +57,14 @@ app
     });
   })
   .get('/api/points', function(req, res) {
-      Model.GWTeamModel.findOne({teamId: req.session.user.teamId, gw: globalObj.gw}).exec(function(error, team){
+      console.log(globalObj);
+      var teamId =  parseInt(req.query.teamId || req.session.user.teamId);
+      Model.GWTeamModel.findOne({teamId: teamId}).lean().exec(function(error, team){
         var playersPopQuery = [{path: 'team.eleven', model: 'players'}, {path: 'team.subs', model: 'players'}];
         Model.TeamModel.populate(team, playersPopQuery,function(err, team) {
           if(err) {
               console.log(err);
+              return;
           }
           var squad = team.team;
           var squadPoints = {};
@@ -65,12 +74,19 @@ app
               if (array.indexOf(property) > -1 ){
                   var players = [];
                   for(var i=0; i<squad[property].length; i++) {
-                      var player = _.extend({}, squad[property][i]);
+                      var player = squad[property][i].toObject();
                       player.points = player.history[globalObj.gw];
+                      if(!player.points) {
+                          player.points = {points: 0};
+                      }
                       players.push(player);
                       if( property === 'eleven') {
-                          //totalPoints += player.points.points;
+                          //console.log(player);
+                          //console.log(player.displayName);
+                          totalPoints += player.points.points;
                       }
+                      //player.points = player.history[globalObj.gw];
+                      //console.log(player);
                   }
               }
               squadPoints[property] = players;

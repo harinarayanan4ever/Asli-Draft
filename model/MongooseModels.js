@@ -2,6 +2,8 @@ var mongoose = require('mongoose');
 
 module.exports = (function(){
     mongoose.connect('mongodb://admin:admin@ds053186.mlab.com:53186/fantasy_draft');
+    //mongo admin:admin@ds053186.mlab.com:53186/fantasy_draft -u dbuser -p dbpassword
+    //mongoose.connect('mongodb://localhost:27017/Fantasy_Draft');
     var Schema = mongoose.Schema;
 
     var TeamSchema = new Schema({
@@ -17,15 +19,13 @@ module.exports = (function(){
     var TeamModel = mongoose.model('teams', TeamSchema);
 
     var GWTeam = new Schema({
-      _id: Number,
-      gw: Number,
+      teamId: Number,
       team: {
         eleven: [{type:Number, ref:'players'}],
         subs: [{type:Number, ref:'players'}]
-      },
-      totalPoints: Number
+      }
     });
-    var GWTeamModel = mongoose.model('gw_teams', GWTeam);
+    var GWTeamModel = mongoose.model('live', GWTeam, 'live');
 
     var EplTeamsModel = mongoose.model('epl_teams',{name: String, id: Number, abbr: String});
 
@@ -52,13 +52,14 @@ module.exports = (function(){
     var UsersModel = mongoose.model('users', {email: String, password: String, teamId: Number});
 
     //var AdminDataModel = mongoose.model('admin',{_id: Number, gw: Number, name: String});
-    var AppDataModel = mongoose.model('app_data',{_id: Number, gw: Number});
+    var AppDataModel = mongoose.model('settings',{_id: Number, gw: Number});
 
     return {
         TeamModel: TeamModel,
         UsersModel: UsersModel,
         EplTeamsModel: EplTeamsModel,
         PlayersModel: PlayersModel,
-        GWTeamModel: GWTeamModel
+        GWTeamModel: GWTeamModel,
+        AppDataModel: AppDataModel
     }
 })();

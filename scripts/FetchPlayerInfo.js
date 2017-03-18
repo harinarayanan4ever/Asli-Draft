@@ -80,6 +80,7 @@ var fetchAllPlayers = function() {
 
         res.on('end', function() {
             fetchPlayerDataFromFPL(JSON.parse(responseString));
+            //test(JSON.parse(responseString));
         });
     });
     req.end();
@@ -88,7 +89,7 @@ var fetchAllPlayers = function() {
 var test = function (allPlayers) {
     var options = {
         host: 'fantasy.premierleague.com',
-        path: '/drf/element-summary/570'
+        path: '/drf/element-summary/574'
     };
 
     var req = https.request(options, function(res, err) {
@@ -105,7 +106,7 @@ var test = function (allPlayers) {
 
         res.on('end', function() {
             var playerObj = JSON.parse(responseString);
-            console.log(new Player(playerObj, allPlayers[569]));
+            console.log(new Player(playerObj, allPlayers[573]));
         });
     });
     req.end();
